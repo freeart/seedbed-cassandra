@@ -4,7 +4,7 @@ const assert = require('assert'),
 module.exports = function () {
 	assert(!this.cassandra, "field exists")
 
-	this.cassandra = new cassandra.Client({ contactPoints: ['localhost'], keyspace: 'ref' });
+	this.cassandra = new cassandra.Client({ contactPoints: ['localhost'], keyspace: 'nvd' });
 
 	return Promise.resolve();
 }
